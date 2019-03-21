@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        nav {
+            display: flex;
+            height: 25vh;
+            flex-wrap: nowrap;
+            /* flex-direction: column; */
+        }
+
+        /* @media (min-width: 500px) {
+            nav {
+                flex-direction: row;
+            }
+        } */
+
+        nav h1 {
+            background: blue;
+            flex-basis: 5rem;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: flex-basis 0.25s, background 2.25s;
+        }
+
+        @media (min-width: 500px) {
+            nav h1 {
+                background: red;
+                flex-basis: 10rem;
+                font-size: 2.4rem;
+                text-transform: uppercase;
+                /* transition: all 2.25s; */
+            }
+        }
+
+        @media (min-width: 1000px) {
+            nav h1 {
+                background: pink;
+            }
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            background: green;
+            flex-grow: 1;
+        }
+
+        @media (min-width: 500px) {
+            nav ul {
+                font-size: 2rem;
+            }
+        }
+
+        nav ul li {
+            margin-right: 1rem;
+        }
+
+        nav li.item-5 {
+            display: none;
+        }
+
+        @media (min-width: 500px) {
+            nav li.item-5 {
+                display: block;
+            }
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            height: 70vh;
+        }
+
+        @media (min-width: 500px) {
+            section {
+                flex-wrap: nowrap;
+            }
+        }
+
+
+        section p {
+            flex-basis: 20rem;
+            flex-grow: 1;
+            border: 1px solid black;
+        }
+
+        section p:nth-child(3) {
+            flex-grow: 3;
+            order: 1;
+        }
+
+        section p:nth-child(4) {
+            flex-grow: 3;
+            order: 2;
+        }
+
+        footer {
+            height: 5vh;
+            background: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>Ironhack</h1>
+        <ul>
+            <li class="section item-1">section 1</li>
+            <li class="section item-2">section 2</li>
+            <li class="section item-3">section 3</li>
+            <li class="section item-4">section 4</li>
+            <li class="section item-5">section 5</li>
+        </ul>
+    </nav>
+    <section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci nulla, ullam mollitia nam assumenda, corrupti earum accusamus perspiciatis dolorum libero aut optio labore veniam molestiae expedita ex iure nostrum quod.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci nulla, ullam mollitia nam assumenda, corrupti earum accusamus perspiciatis dolorum libero aut optio labore veniam molestiae expedita ex iure nostrum quod.</p>
+        <p>Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos </p>
+        <p>Hola chicos 222222 Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos Hola chicos </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci nulla, ullam mollitia nam assumenda, corrupti earum accusamus perspiciatis dolorum libero aut optio labore veniam molestiae expedita ex iure nostrum quod.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci nulla, ullam mollitia nam assumenda, corrupti earum accusamus perspiciatis dolorum libero aut optio labore veniam molestiae expedita ex iure nostrum quod.</p>
+    </section>
+
+    <footer>
+        Copyright 2019 Ironhack
+    </footer>
+</body>
+
+</html>
