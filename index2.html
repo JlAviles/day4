@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="criteria">
+
+        <button id="b">Click me to filter!</button>
+    </form>
+
+    <script>
+        function filterMyArray(criteria) {
+            var strings = ["aaaa", "hhhhh", "bbbbbbb", "cccccc", "ddddddddd"]
+
+            var output = strings
+                .filter(string => string.length >= criteria)
+                .map(function (string) {
+                    return {
+                        str: string,
+                        length: string.length
+                    }
+                })
+                // .reduce((ac, cValue) => cValue.length + ac, 0)
+
+            console.log(output)
+        }
+
+        document.getElementById("b").onclick = function (e) {
+            e.preventDefault()
+            filterMyArray(+document.querySelector("#criteria").value)
+        }
+
+
+
+    </script>
+</body>
+
+</html>
